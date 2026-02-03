@@ -53,7 +53,7 @@ contactForm.addEventListener("submit", function (e) {
   // Show success message
   showMessage(
     "Thank you! Your consultation request has been received. We'll contact you soon.",
-    "success"
+    "success",
   );
 
   // Reset form
@@ -150,7 +150,7 @@ const observer = new IntersectionObserver(function (entries) {
 // Apply fade-in animation to cards and sections on page load
 document.addEventListener("DOMContentLoaded", function () {
   const animatedElements = document.querySelectorAll(
-    ".card, .service-card, .pricing-card, .step, .why-card"
+    ".card, .service-card, .pricing-card, .step, .why-card",
   );
 
   animatedElements.forEach((el) => {
@@ -166,18 +166,18 @@ document.addEventListener("DOMContentLoaded", function () {
 // ==========================================
 
 console.log(
-  "%c🚀 AISO Website Loaded Successfully!",
-  "background: linear-gradient(135deg, #00f0ff 0%, #0ea5e9 100%); color: #0a0e27; font-size: 16px; font-weight: bold; padding: 10px 20px; border-radius: 5px;"
+  "%c🚀 ALFluence Website Loaded Successfully!",
+  "background: linear-gradient(135deg, #00f0ff 0%, #0ea5e9 100%); color: #0a0e27; font-size: 16px; font-weight: bold; padding: 10px 20px; border-radius: 5px;",
 );
 console.log(
   "%c✨ AI-Tech Blue Gradient Theme Active",
-  "color: #00f0ff; font-size: 14px; font-weight: bold;"
+  "color: #00f0ff; font-size: 14px; font-weight: bold;",
 );
 console.log(
   "%cThis is a frontend-only demo for Innovation & Entrepreneurship project",
-  "color: #a5b4fc; font-size: 12px;"
+  "color: #a5b4fc; font-size: 12px;",
 );
 console.log(
   "%cForm submissions are logged to console (no backend connected)",
-  "color: #a5b4fc; font-size: 12px;"
+  "color: #a5b4fc; font-size: 12px;",
 );

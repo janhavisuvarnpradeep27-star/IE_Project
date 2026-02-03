@@ -48,15 +48,16 @@
   --border-glow: rgba(0, 240, 255, 0.3);
 
   /* Glow Effects - Subtle & Premium */
-  --glow-cyan: 0 0 15px rgba(0, 240, 255, 0.15),
-    0 0 30px rgba(0, 240, 255, 0.08);
-  --glow-blue: 0 0 15px rgba(59, 130, 246, 0.2),
-    0 0 30px rgba(59, 130, 246, 0.1);
+  --glow-cyan:
+    0 0 15px rgba(0, 240, 255, 0.15), 0 0 30px rgba(0, 240, 255, 0.08);
+  --glow-blue:
+    0 0 15px rgba(59, 130, 246, 0.2), 0 0 30px rgba(59, 130, 246, 0.1);
   --glow-soft: 0 0 20px rgba(0, 240, 255, 0.08);
 
   /* Typography */
-  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  --font-main:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
 
   /* Spacing */
   --section-padding: 80px 20px;
@@ -96,6 +97,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .logo {
@@ -411,7 +413,9 @@ body {
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 25px rgba(0, 240, 255, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.3);
   border-color: var(--neon-cyan);
 }
 
@@ -513,18 +517,24 @@ body {
 
 .pricing-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 25px rgba(0, 240, 255, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .pricing-card.featured {
   border: 2px solid var(--neon-cyan);
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15), 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 30px rgba(0, 240, 255, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .pricing-card.featured:hover {
   transform: scale(1.05) translateY(-8px);
-  box-shadow: 0 0 35px rgba(0, 240, 255, 0.2), 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 0 35px rgba(0, 240, 255, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .badge {
@@ -676,7 +686,9 @@ body {
 
 .why-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 20px rgba(0, 240, 255, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .why-card h3 {
@@ -797,7 +809,24 @@ body {
    RESPONSIVE DESIGN
    ========================================== */
 
+@media (max-width: 1024px) {
+  .problem-content {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-cards,
+  .pricing-cards,
+  .why-us-grid,
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .hero {
     padding: 100px 20px;
   }
@@ -810,10 +839,22 @@ body {
     font-size: 16px;
   }
 
-  .nav-links {
+  .navbar .container {
     flex-direction: column;
-    gap: 10px;
-    align-items: flex-end;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    justify-content: center;
   }
 
   .problem-content,
@@ -853,6 +894,10 @@ body {
 
   .section-title {
     font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
   }
 
   .card,
