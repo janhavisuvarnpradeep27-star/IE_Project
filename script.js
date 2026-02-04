@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ==========================================
 
 console.log(
-  "%c🚀 ALFluence Website Loaded Successfully!",
+  "%c🚀 AIFluence Website Loaded Successfully!",
   "background: linear-gradient(135deg, #00f0ff 0%, #0ea5e9 100%); color: #0a0e27; font-size: 16px; font-weight: bold; padding: 10px 20px; border-radius: 5px;",
 );
 console.log(

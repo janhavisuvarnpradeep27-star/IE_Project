@@ -101,11 +101,49 @@ body {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-size: 28px;
-  font-weight: bold;
-  color: var(--neon-cyan);
-  text-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 1.5px;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff 0%, rgba(255, 255, 255, 0) 45%),
+    linear-gradient(135deg, #00f0ff 0%, #6366f1 55%, #4c1d95 100%);
+  box-shadow:
+    0 0 18px rgba(0, 240, 255, 0.35),
+    0 0 30px rgba(99, 102, 241, 0.2);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+.logo-text {
+  background: linear-gradient(90deg, #ffffff 0%, #a5f3fc 45%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 18px rgba(0, 240, 255, 0.25);
+}
+
+.logo:hover .logo-mark {
+  transform: rotate(-6deg) scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 .nav-links {
